@@ -1,0 +1,36 @@
+/* Problem Statement
+You are given ‘N’ integers in the form of an array ‘ARR’. Print the sorted array using the insertion sort.
+
+Input Format :
+The first line of input contains an integer ‘T’, denoting the number of test cases.
+The first line of each test case contains an integer, ‘N’, representing the size of the array.
+The second line of each test case contains ‘N’ space-separated integers, representing the array ‘ARR’ elements.
+
+Output Format :
+For each test case, print the sorted array.
+Print output of each test case in a separate line. */
+
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+void insertionSort(int n, vector<int> &arr)
+{
+    for (int i = 1; i < n; i++)
+    {
+        int temp = arr[i];
+        int j = i - 1;
+        for (; j >= 0; j--)
+        {
+            if (arr[j] > temp)
+            {
+                arr[j + 1] = arr[j];
+            }
+            else
+                break;
+        }
+        arr[j + 1] = temp;
+    }
+}
+
+int main() {}
