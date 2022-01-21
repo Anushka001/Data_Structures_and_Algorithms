@@ -24,7 +24,7 @@ int main()
     int key = 12;
     bool ans = LinearSearch(arr, size, key);
 
-    if(ans)
+    if (ans)
         cout << "Element present in array" << endl;
     else
         cout << "Element not present in array" << endl;
